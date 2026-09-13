@@ -1,0 +1,106 @@
+/* ===================================================
+   DESIGN SYSTEM - INSTITUTO FUTURO VERDE
+   =================================================== */
+
+:root {
+  /* --- PALETA DE CORES (8 Cores Distintas) --- */
+  /* Cores Primárias */
+  --color-primary: #1b5e20;        /* Verde Escuro (Acessibilidade/Contraste) */
+  --color-primary-light: #4caf50;  /* Verde Folha (Destaques e botões) */
+
+  /* Cores Secundárias */
+  --color-secondary: #00796b;      /* Verde Esmeralda/Azuladas (Suporte) */
+  --color-secondary-light: #80cbc4;/* Tom Suave para Hover/Backgrounds */
+
+  /* Tons Neutros */
+  --color-bg-light: #f8f9fa;       /* Fundo principal claro */
+  --color-card-bg: #ffffff;        /* Fundo de cartões e formulários */
+  --color-text-dark: #212529;      /* Texto principal (Alto contraste) */
+  --color-text-muted: #6c757d;     /* Texto secundário/rodapé */
+
+  /* --- ESCALA TIPOGRÁFICA (5 Patamares Hierárquicos) --- */
+  --font-family-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-size-h1: 2.5rem;   /* ~40px - Título Principal */
+  --font-size-h2: 2.0rem;   /* ~32px - Títulos de Seção */
+  --font-size-h3: 1.5rem;   /* ~24px - Subtítulos e Cartões */
+  --font-size-body: 1.0rem; /* ~16px - Texto Base / Parágrafos */
+  --font-size-small: 0.875rem; /* ~14px - Textos Auxiliares/Rodapé */
+
+  /* --- ESPAÇAMENTOS MODULARES (Escala Base 8px) --- */
+  --spacing-xs: 0.5rem;  /* 8px */
+  --spacing-sm: 1.0rem;  /* 16px */
+  --spacing-md: 1.5rem;  /* 24px */
+  --spacing-lg: 2.0rem;  /* 32px */
+  --spacing-xl: 3.0rem;  /* 48px */
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--spacing-md);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-sm);
+}
+
+.hero {
+  grid-column: span 12;
+}
+
+.main-content {
+  grid-column: span 8;
+}
+
+.sidebar {
+  grid-column: span 4;
+}
+
+@media (max-width: 576px) {
+  .main-content, .sidebar { grid-column: span 12; }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .main-content { grid-column: span 12; }
+  .sidebar { grid-column: span 12; }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .main-content { grid-column: span 7; }
+  .sidebar { grid-column: span 5; }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  .main-content { grid-column: span 8; }
+  .sidebar { grid-column: span 4; }
+}
+
+@media (min-width: 1201px) {
+  .main-content { grid-column: span 8; }
+  .sidebar { grid-column: span 4; }
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--spacing-md);
+  background-color: var(--color-card-bg);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--spacing-md);
+  list-style: none;
+}

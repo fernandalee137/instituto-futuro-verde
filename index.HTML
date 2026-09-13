@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Instituto Futuro Verde</title>
+  <style>
+    :root {
+      --color-primary: #1b5e20;
+      --color-primary-light: #4caf50;
+      --color-secondary: #00796b;
+      --color-secondary-light: #80cbc4;
+      --color-bg-light: #f8f9fa;
+      --color-card-bg: #ffffff;
+      --color-text-dark: #212529;
+      --color-text-muted: #6c757d;
+      --font-family-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      --spacing-sm: 1.0rem;
+      --spacing-md: 1.5rem;
+      --spacing-lg: 2.0rem;
+      --spacing-xl: 3.0rem;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-family-base);
+      background-color: var(--color-bg-light);
+      color: var(--color-text-dark);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--color-primary);
+      color: #fff;
+      padding: var(--spacing-sm) var(--spacing-md);
+      flex-wrap: wrap;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-area h1 {
+      font-size: 1.5rem;
+      color: #fff;
+      margin: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: var(--spacing-md);
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--color-secondary-light);
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: var(--spacing-md);
+      max-width: 1200px;
+      margin: var(--spacing-lg) auto;
+      padding: 0 var(--spacing-sm);
+    }
+
+    .main-content {
+      grid-column: span 8;
+    }
+
+    .sidebar {
+      grid-column: span 4;
+    }
+
+    @media (max-width: 768px) {
+      .main-content, .sidebar { grid-column: span 12; }
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: var(--spacing-md);
+      background-color: var(--color-card-bg);
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .card-header h2, .card-header h3 {
+      margin: 0;
+      font-size: 1.25rem;
+    }
+
+    .badge {
+      background-color: var(--color-secondary-light);
+      color: var(--color-primary);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: bold;
+    }
+
+    .alert-info {
+      background-color: var(--color-secondary-light);
+      border-left: 4px solid var(--color-secondary);
+      padding: 0.5rem 0.75rem;
+      margin-top: var(--spacing-sm);
+      font-size: 0.875rem;
+      color: var(--color-primary);
+    }
+
+    .site-footer {
+      text-align: center;
+      padding: var(--spacing-md);
+      background-color: var(--color-primary);
+      color: #fff;
+      font-size: 0.875rem;
+      margin-top: var(--spacing-xl);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo-area">
+      <img src="img/logo.png" alt="Logo IPAS" style="height: 40px;">
+      <h1>Instituto Futuro Verde</h1>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="projetos.html">Projetos Sociais</a></li>
+      <li><a href="cadastro.html">Cadastro</a></li>
+    </ul>
+  </header>
+
+  <main class="container">
+    <section class="main-content card">
+      <div class="card-header">
+        <h2>Sobre a Organização</h2>
+        <span class="badge">Institucional</span>
+      </div>
+      <p>Transformando realidades por meio de sustentabilidade, educação ambiental e reflorestamento urbano.</p>
+      <div class="alert-info">
+        Novas turmas de voluntariado abertas para este trimestre!
+      </div>
+    </section>
+
+    <aside class="sidebar card">
+      <div class="card-header">
+        <h3>Destaque</h3>
+        <span class="badge">Ação</span>
+      </div>
+      <p style="font-size: 0.875rem; color: var(--color-text-muted);">Participe das nossas iniciativas locais e faça a diferença na sua comunidade.</p>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Instituto Futuro Verde. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
